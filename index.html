@@ -14,9 +14,17 @@
   <meta property="og:description" content="Profesjonalny montaż filtrów odwróconej osmozy, zmiękczaczy wody i stacji uzdatniania. Gorzów Wielkopolski i województwo lubuskie.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pl_PL">
+  <meta property="og:image" content="https://git-push-force-of-habit.github.io/filtry-do-wody/images/background.jpg">
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://filtrydowodygorzow.pl/">
+  <link rel="canonical" href="https://git-push-force-of-habit.github.io/filtry-do-wody/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
 
   <!-- Schema.org LocalBusiness -->
   <script type="application/ld+json">
@@ -25,7 +33,7 @@
     "@type": "LocalBusiness",
     "name": "Filtry Do Wody – Gorzów",
     "description": "Profesjonalne systemy uzdatniania wody pitnej i użytkowej. Montaż filtrów odwróconej osmozy, zmiękczaczy wody oraz stacji uzdatniania wody studziennej.",
-    "url": "https://filtrydowodygorzow.pl/",
+    "url": "https://git-push-force-of-habit.github.io/filtry-do-wody/",
     "telephone": "+48608666575",
     "email": "filtrygorzow@gmail.com",
     "address": {
@@ -90,292 +98,448 @@
 <body>
 
   <!-- ===================== HEADER ===================== -->
-  <header>
-    <div>
-      <!-- Logo placeholder – zostanie zastąpione przez SVG -->
-      <a href="#" aria-label="Filtry Do Wody Gorzów – strona główna">
-        <img src="logo.svg" alt="Logo Filtry Do Wody Gorzów" width="64" height="64">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo-link" aria-label="Filtry Do Wody Gorzów – strona główna">
+        <img src="images/logo.svg" alt="Logo Filtry Do Wody Gorzów" width="48" height="48">
+        <div class="logo-text">
+          <strong>Filtry Do Wody – Gorzów</strong>
+          <span>Profesjonalne systemy uzdatniania wody</span>
+        </div>
       </a>
-      <div>
-        <strong>Filtry Do Wody – Gorzów</strong>
-        <span>Profesjonalne systemy uzdatniania wody</span>
-      </div>
+
+      <button class="hamburger" aria-label="Otwórz menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Nawigacja główna">
+        <ul>
+          <li><a href="#oferta">Oferta</a></li>
+          <li><a href="#ro">Filtry RO</a></li>
+          <li><a href="#zmiekczacz">Zmiękczacze</a></li>
+          <li><a href="#stacja">Woda studzienna</a></li>
+          <li><a href="#o-nas">O nas</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="nav-overlay"></div>
     </div>
-    <nav aria-label="Nawigacja główna">
-      <ul>
-        <li><a href="#oferta">Oferta</a></li>
-        <li><a href="#ro">Filtry RO</a></li>
-        <li><a href="#zmiekczacz">Zmiękczacze</a></li>
-        <li><a href="#stacja">Woda studzienna</a></li>
-        <li><a href="#o-nas">O nas</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main>
 
     <!-- ===================== HERO ===================== -->
-    <section id="hero" aria-labelledby="hero-heading">
-      <h1 id="hero-heading">Filtry Do Wody – Gorzów</h1>
-      <p>Profesjonalny montaż filtrów odwróconej osmozy, zmiękczaczy wody i stacji uzdatniania.<br>
-      Obsługujemy Gorzów Wielkopolski i całe województwo lubuskie.</p>
-      <div>
-        <a href="tel:+48608666575">Zadzwoń: +48 608 666 575</a>
-        <a href="#kontakt">Napisz do nas</a>
+    <section id="hero" class="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg">
+        <img src="images/background.jpg" alt="" width="1920" height="800" loading="eager">
       </div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          Gorzów Wielkopolski i woj. lubuskie
+        </div>
+        <h1 id="hero-heading">Filtry Do Wody – Gorzów</h1>
+        <p class="hero-subtitle">Profesjonalny montaż filtrów odwróconej osmozy,<br> zmiękczaczy wody i&nbsp;stacji uzdatniania.</p>
+        <p class="hero-subtitle">Obsługujemy Gorzów Wielkopolski i&nbsp;całe województwo lubuskie.</p>
+        <div class="hero-buttons">
+          <a href="tel:+48608666575" class="btn btn-primary">
+            <svg class="hero-phone-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
+            +48 608 666 575
+          </a>
+          <a href="#kontakt" class="btn btn-outline">Napisz do nas</a>
+        </div>
+      </div>
+
+      <a href="#oferta" class="scroll-indicator" aria-label="Przewiń do oferty">
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
     </section>
 
     <!-- ===================== OFERTA – PRZEGLĄD ===================== -->
-    <section id="oferta" aria-labelledby="oferta-heading">
-      <h2 id="oferta-heading">Nasza oferta</h2>
-      <p>Firma Filtry Do Wody – Gorzów specjalizuje się w kompleksowym uzdatnianiu wody pitnej i użytkowej. Pomagamy mieszkańcom regionu poprawić jakość wody, oferując nowoczesne rozwiązania dopasowane do indywidualnych potrzeb.</p>
-      <ul>
-        <li>
-          <article>
+    <section id="oferta" class="section" aria-labelledby="oferta-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Oferta</span>
+          <h2 id="oferta-heading">Nasza oferta</h2>
+          <p>Specjalizujemy się w kompleksowym uzdatnianiu wody pitnej i użytkowej. Oferujemy nowoczesne rozwiązania dopasowane do indywidualnych potrzeb.</p>
+        </div>
+
+        <ul class="offer-grid">
+          <li class="offer-card">
+            <div class="offer-card-icon">
+              <svg viewBox="-1 -1 26 26" aria-hidden="true"><path d="M12 2c-5.33 4.55-8 8.48-8 11.8 0 4.98 3.8 8.2 8 8.2s8-3.22 8-8.2C20 10.48 17.33 6.55 12 2z" fill="none" stroke="currentColor"/></svg>
+            </div>
             <h3><a href="#ro">Filtry odwróconej osmozy (RO)</a></h3>
             <p>Najskuteczniejsza metoda oczyszczania wody pitnej – usuwa do 99% zanieczyszczeń, w tym bakterie, metale ciężkie i mikroplastik.</p>
-          </article>
-        </li>
-        <li>
-          <article>
+            <a href="#ro" class="offer-card-link">Dowiedz się więcej <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          </li>
+          <li class="offer-card">
+            <div class="offer-card-icon">
+              <svg viewBox="-1 -1 26 26" aria-hidden="true"><path d="M19.35 10.04A7.49 7.49 0 0012 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 000 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" fill="none" stroke="currentColor"/></svg>
+            </div>
             <h3><a href="#zmiekczacz">Zmiękczacze wody użytkowej</a></h3>
             <p>Trwałe rozwiązanie problemu twardej wody i kamienia kotłowego dla całego domu lub firmy.</p>
-          </article>
-        </li>
-        <li>
-          <article>
+            <a href="#zmiekczacz" class="offer-card-link">Dowiedz się więcej <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          </li>
+          <li class="offer-card">
+            <div class="offer-card-icon">
+              <svg viewBox="-1 -1 26 26" aria-hidden="true"><path d="M12 22c4-4 8-7.58 8-12a8 8 0 10-16 0c0 4.42 4 8 8 12z" fill="none" stroke="currentColor"/><circle cx="12" cy="10" r="3" fill="none" stroke="currentColor"/></svg>
+            </div>
             <h3><a href="#stacja">Stacje uzdatniania wody studziennej</a></h3>
             <p>Kompleksowe systemy filtracyjne dla właścicieli studni – dobierane indywidualnie na podstawie badań wody.</p>
-          </article>
-        </li>
-      </ul>
+            <a href="#stacja" class="offer-card-link">Dowiedz się więcej <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <!-- ===================== FILTR RO ===================== -->
-    <section id="ro" aria-labelledby="ro-heading">
-      <h2 id="ro-heading">Filtry odwróconej osmozy (RO) – Gorzów</h2>
+    <section id="ro" class="section section-alt detail-section" aria-labelledby="ro-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Filtry RO</span>
+          <h2 id="ro-heading">Filtry odwróconej osmozy (RO) – Gorzów</h2>
+        </div>
 
-      <h3>Czym jest filtr RO i dlaczego warto go mieć w domu?</h3>
-      <p>Filtr RO (Reverse Osmosis), czyli filtr odwróconej osmozy, to zaawansowany system oczyszczania wody, który wykorzystuje półprzepuszczalną membranę do zatrzymywania zanieczyszczeń na poziomie molekularnym. To jedna z najdokładniejszych metod filtracji dostępnych na świecie – usuwa nawet takie cząsteczki, których nie zatrzymują standardowe filtry węglowe czy mechaniczne.</p>
+        <div>
+          <h3>Czym jest filtr RO i dlaczego warto go mieć w domu?</h3>
+          <p>Filtr RO (Reverse Osmosis), czyli filtr odwróconej osmozy, to zaawansowany system oczyszczania wody, który wykorzystuje półprzepuszczalną membranę do zatrzymywania zanieczyszczeń na poziomie molekularnym. To jedna z najdokładniejszych metod filtracji dostępnych na świecie – usuwa nawet takie cząsteczki, których nie zatrzymują standardowe filtry węglowe czy mechaniczne.</p>
 
-      <h3>Do czego służy filtr RO?</h3>
-      <p>System odwróconej osmozy usuwa z wody między innymi:</p>
-      <ul>
-        <li>bakterie i wirusy,</li>
-        <li>metale ciężkie (np. ołów, arsen, rtęć),</li>
-        <li>pestycydy i pozostałości farmaceutyków,</li>
-        <li>chlor i jego pochodne,</li>
-        <li>mikroplastik,</li>
-        <li>kamień i nadmierną mineralizację,</li>
-        <li>nieprzyjemne zapachy i posmak.</li>
-      </ul>
-      <p>Woda po filtrach RO jest czysta, lekka, idealna do picia, gotowania oraz przygotowywania posiłków.</p>
+          <h3>Do czego służy filtr RO?</h3>
+          <p>System odwróconej osmozy usuwa z wody między innymi:</p>
+          <ul>
+            <li>bakterie i wirusy,</li>
+            <li>metale ciężkie (np. ołów, arsen, rtęć),</li>
+            <li>pestycydy i pozostałości farmaceutyków,</li>
+            <li>chlor i jego pochodne,</li>
+            <li>mikroplastik,</li>
+            <li>kamień i nadmierną mineralizację,</li>
+            <li>nieprzyjemne zapachy i posmak.</li>
+          </ul>
+          <p>Woda po filtrach RO jest czysta, lekka, idealna do picia, gotowania oraz przygotowywania posiłków.</p>
 
-      <h3>Jak skuteczny jest filtr RO?</h3>
-      <p>Membrana osmotyczna usuwa z wody do 98–99% wszystkich zanieczyszczeń. To poziom czystości, którego nie gwarantują żadne tradycyjne systemy filtracji. Dlatego uzdatnianie metodą RO jest standardem wszędzie tam, gdzie wymagana jest najwyższa jakość wody – w szpitalach, laboratoriach i przy produkcji żywności dla niemowląt.</p>
+          <h3>Jak skuteczny jest filtr RO?</h3>
+          <p>Membrana osmotyczna usuwa z wody do 98–99% wszystkich zanieczyszczeń. To poziom czystości, którego nie gwarantują żadne tradycyjne systemy filtracji. Dlatego uzdatnianie metodą RO jest standardem wszędzie tam, gdzie wymagana jest najwyższa jakość wody – w szpitalach, laboratoriach i przy produkcji żywności dla niemowląt.</p>
 
-      <h3>Historia technologii RO</h3>
-      <p>Technologia odwróconej osmozy została opracowana w latach 50. XX wieku, a od lat 60. stosowana jest na szeroką skalę, między innymi w odsalarniach wody morskiej w USA. Obecnie uznawana jest za najbardziej skuteczną i najbezpieczniejszą metodę oczyszczania wody, używaną zarówno w przemyśle spożywczym, medycznym i farmaceutycznym, jak i w gospodarstwach domowych.</p>
+          <h3>Historia technologii RO</h3>
+          <p>Technologia odwróconej osmozy została opracowana w latach 50. XX wieku, a od lat 60. stosowana jest na szeroką skalę, między innymi w odsalarniach wody morskiej w USA. Obecnie uznawana jest za najbardziej skuteczną i najbezpieczniejszą metodę oczyszczania wody, używaną zarówno w przemyśle spożywczym, medycznym i farmaceutycznym, jak i w gospodarstwach domowych.</p>
 
-      <h3>Zalety filtrów RO</h3>
-      <ul>
-        <li><strong>Najwyższa skuteczność</strong> – filtr RO usuwa niemal wszystkie substancje szkodliwe, w tym te niewidoczne i niewyczuwalne.</li>
-        <li><strong>Eliminacja mikroplastiku</strong> – membrana zatrzymuje cząsteczki o wielkości poniżej 1 mikrona.</li>
-        <li><strong>Usuwanie wirusów i bakterii</strong> – poziom filtracji nieosiągalny dla zwykłych filtrów kuchennych.</li>
-        <li><strong>Brak kamienia kotłowego</strong> – woda jest miękka, przez co chroni czajniki, ekspresy i inne urządzenia.</li>
-        <li><strong>Lepszy smak i zapach</strong> – woda po RO smakuje jak woda źródlana, bez posmaków chloru i metali.</li>
-        <li><strong>Stabilna jakość</strong> – membrany i filtry są trwałe i niezawodne przez długi czas.</li>
-      </ul>
+          <h3>Zalety filtrów RO</h3>
+          <ul class="advantages-list">
+            <li><strong>Najwyższa skuteczność</strong> – filtr RO usuwa niemal wszystkie substancje szkodliwe, w tym te niewidoczne i niewyczuwalne.</li>
+            <li><strong>Eliminacja mikroplastiku</strong> – membrana zatrzymuje cząsteczki o wielkości poniżej 1 mikrona.</li>
+            <li><strong>Usuwanie wirusów i bakterii</strong> – poziom filtracji nieosiągalny dla zwykłych filtrów kuchennych.</li>
+            <li><strong>Brak kamienia kotłowego</strong> – woda jest miękka, przez co chroni czajniki, ekspresy i inne urządzenia.</li>
+            <li><strong>Lepszy smak i zapach</strong> – woda po RO smakuje jak woda źródlana, bez posmaków chloru i metali.</li>
+            <li><strong>Stabilna jakość</strong> – membrany i filtry są trwałe i niezawodne przez długi czas.</li>
+          </ul>
 
-      <h3>Korzyści na co dzień</h3>
-      <dl>
-        <dt>Woda zdrowa dla całej rodziny</dt>
-        <dd>Usunięcie zanieczyszczeń chemicznych i biologicznych sprawia, że woda jest bezpieczna prosto z kranu. Idealna do picia, przygotowywania mleka dla dzieci, posiłków i napojów.</dd>
+          <h3>Korzyści na co dzień</h3>
+          <div class="benefits-grid">
+            <div class="benefit-item">
+              <dt>Woda zdrowa dla całej rodziny</dt>
+              <dd>Usunięcie zanieczyszczeń chemicznych i biologicznych sprawia, że woda jest bezpieczna prosto z kranu. Idealna do picia, przygotowywania mleka dla dzieci, posiłków i napojów.</dd>
+            </div>
+            <div class="benefit-item">
+              <dt>Koniec z mikroplastikiem</dt>
+              <dd>Badania potwierdzają obecność mikroplastiku w wodzie wodociągowej. Filtr RO skutecznie go usuwa, co pozytywnie wpływa na zdrowie i komfort.</dd>
+            </div>
+            <div class="benefit-item">
+              <dt>Brak kamienia w urządzeniach</dt>
+              <dd>Czajnik, ekspres do kawy czy żelazko działają dłużej i bez awarii. Żadnych osadów ani białych zacieków.</dd>
+            </div>
+            <div class="benefit-item">
+              <dt>Oszczędność</dt>
+              <dd>Nie trzeba kupować ciężkich zgrzewek wody butelkowanej – filtr RO dostarcza czystą wodę bezpośrednio w kuchni.</dd>
+            </div>
+            <div class="benefit-item">
+              <dt>Lepszy smak potraw i napojów</dt>
+              <dd>Herbata, kawa czy zupy przygotowane z czystej wody mają wyraźniejszy smak i aromat.</dd>
+            </div>
+          </div>
 
-        <dt>Koniec z mikroplastikiem</dt>
-        <dd>Badania potwierdzają obecność mikroplastiku w wodzie wodociągowej. Filtr RO skutecznie go usuwa, co pozytywnie wpływa na zdrowie i komfort.</dd>
-
-        <dt>Brak kamienia w urządzeniach</dt>
-        <dd>Czajnik, ekspres do kawy czy żelazko działają dłużej i bez awarii. Żadnych osadów ani białych zacieków.</dd>
-
-        <dt>Oszczędność</dt>
-        <dd>Nie trzeba kupować ciężkich zgrzewek wody butelkowanej – filtr RO dostarcza czystą wodę bezpośrednio w kuchni.</dd>
-
-        <dt>Lepszy smak potraw i napojów</dt>
-        <dd>Herbata, kawa czy zupy przygotowane z czystej wody mają wyraźniejszy smak i aromat.</dd>
-      </dl>
-
-      <p>Jeśli chcesz mieć w domu wodę najwyższej jakości – czystą, zdrową i pozbawioną szkodliwych substancji – filtr RO to najlepszy wybór. <a href="#kontakt">Skontaktuj się z nami</a> i dobierzemy dla Ciebie odpowiedni model.</p>
+          <div class="detail-cta">
+            <p>Chcesz mieć w domu wodę najwyższej jakości – <strong>czystą, zdrową i pozbawioną szkodliwych substancji</strong>?</p>
+            <a href="#kontakt" class="btn btn-primary">Skontaktuj się z nami</a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ===================== ZMIĘKCZACZ ===================== -->
-    <section id="zmiekczacz" aria-labelledby="zmiekczacz-heading">
-      <h2 id="zmiekczacz-heading">Zmiękczacze wody – Gorzów</h2>
+    <section id="zmiekczacz" class="section detail-section" aria-labelledby="zmiekczacz-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Zmiękczacze</span>
+          <h2 id="zmiekczacz-heading">Zmiękczacze wody – Gorzów</h2>
+        </div>
 
-      <h3>Czym jest zmiękczacz wody?</h3>
-      <p>Zmiękczacz wody użytkowej to urządzenie, które usuwa z wody jony wapnia i magnezu odpowiedzialne za jej twardość, czyli powstawanie kamienia kotłowego. Dzięki procesowi wymiany jonowej twarda woda zostaje zastąpiona wodą miękką, bezpieczną dla instalacji, urządzeń i codziennego użytkowania w domu.</p>
-      <p>To obecnie najskuteczniejsza i praktycznie jedyna metoda realnego usuwania kamienia z wody – a nie tylko jego maskowania, jak w przypadku filtrów mechanicznych czy magnetyzerów.</p>
+        <div>
+          <h3>Czym jest zmiękczacz wody?</h3>
+          <p>Zmiękczacz wody użytkowej to urządzenie, które usuwa z wody jony wapnia i magnezu odpowiedzialne za jej twardość, czyli powstawanie kamienia kotłowego. Dzięki procesowi wymiany jonowej twarda woda zostaje zastąpiona wodą miękką, bezpieczną dla instalacji, urządzeń i codziennego użytkowania w domu.</p>
+          <p>To obecnie najskuteczniejsza i praktycznie jedyna metoda realnego usuwania kamienia z wody – a nie tylko jego maskowania, jak w przypadku filtrów mechanicznych czy magnetyzerów.</p>
 
-      <h3>Do czego służy zmiękczacz wody?</h3>
-      <p>Zmiękczacz eliminuje problem twardej wody w całym budynku:</p>
-      <ul>
-        <li>zapobiega osadzaniu się kamienia w rurach i bojlerach,</li>
-        <li>chroni kotły, pompy ciepła i podgrzewacze,</li>
-        <li>zabezpiecza pralki, zmywarki i ekspresy do kawy,</li>
-        <li>poprawia komfort kąpieli i mycia,</li>
-        <li>wydłuża żywotność całej instalacji wodnej.</li>
-      </ul>
-      <p>Miękka woda działa w całym domu – w kuchni, łazience i kotłowni.</p>
+          <h3>Do czego służy zmiękczacz wody?</h3>
+          <p>Zmiękczacz eliminuje problem twardej wody w całym budynku:</p>
+          <ul>
+            <li>zapobiega osadzaniu się kamienia w rurach i bojlerach,</li>
+            <li>chroni kotły, pompy ciepła i podgrzewacze,</li>
+            <li>zabezpiecza pralki, zmywarki i ekspresy do kawy,</li>
+            <li>poprawia komfort kąpieli i mycia,</li>
+            <li>wydłuża żywotność całej instalacji wodnej.</li>
+          </ul>
+          <p>Miękka woda działa w całym domu – w kuchni, łazience i kotłowni.</p>
 
-      <h3>Jak skuteczny jest zmiękczacz?</h3>
-      <p>Zmiękczacz usuwa do 100% twardości węglanowej i niewęglanowej, redukując stężenie wapnia i magnezu niemal do zera. To poziom, którego nie zapewniają inne rozwiązania dostępne na rynku. Problem kamienia znika u źródła, a nie tylko na powierzchni urządzeń.</p>
-      <p>Magnetyzery, filtry węglowe czy mechaniczne nie usuwają twardości wody – robi to wyłącznie zmiękczacz pracujący na żywicy jonowymiennej.</p>
+          <h3>Jak skuteczny jest zmiękczacz?</h3>
+          <p>Zmiękczacz usuwa do 100% twardości węglanowej i niewęglanowej, redukując stężenie wapnia i magnezu niemal do zera. To poziom, którego nie zapewniają inne rozwiązania dostępne na rynku. Problem kamienia znika u źródła, a nie tylko na powierzchni urządzeń.</p>
+          <p>Magnetyzery, filtry węglowe czy mechaniczne nie usuwają twardości wody – robi to wyłącznie zmiękczacz pracujący na żywicy jonowymiennej.</p>
 
-      <h3>Zalety zmiękczacza</h3>
-      <ul>
-        <li><strong>Realne usuwanie kamienia</strong> – a nie jego rozbijanie czy maskowanie.</li>
-        <li><strong>Ochrona całej instalacji</strong> – nie tylko jednego punktu poboru.</li>
-        <li><strong>Stabilna jakość wody</strong> – przez całą dobę.</li>
-        <li><strong>Bezobsługowa praca</strong> – automatyczna regeneracja złoża.</li>
-        <li><strong>Oszczędność energii</strong> – brak osadu poprawia wymianę ciepła w kotłach i bojlerach.</li>
-      </ul>
+          <h3>Zalety zmiękczacza</h3>
+          <ul class="advantages-list">
+            <li><strong>Realne usuwanie kamienia</strong> – a nie jego rozbijanie czy maskowanie.</li>
+            <li><strong>Ochrona całej instalacji</strong> – nie tylko jednego punktu poboru.</li>
+            <li><strong>Stabilna jakość wody</strong> – przez całą dobę.</li>
+            <li><strong>Bezobsługowa praca</strong> – automatyczna regeneracja złoża.</li>
+            <li><strong>Oszczędność energii</strong> – brak osadu poprawia wymianę ciepła w kotłach i bojlerach.</li>
+          </ul>
 
-      <h3>Korzyści na co dzień</h3>
-      <dl>
-        <dt>Koniec z kamieniem</dt>
-        <dd>Brak białych osadów na armaturze, kabinach, czajniku i kafelkach.</dd>
+          <h3>Korzyści na co dzień</h3>
+          <div class="benefits-grid">
+            <div class="benefit-item">
+              <dt>Koniec z kamieniem</dt>
+              <dd>Brak białych osadów na armaturze, kabinach, czajniku i kafelkach.</dd>
+            </div>
+            <div class="benefit-item">
+              <dt>Ochrona sprzętu AGD i kotłów</dt>
+              <dd>Pralki, zmywarki, ekspresy, bojlery i piece działają dłużej i bez awarii.</dd>
+            </div>
+            <div class="benefit-item">
+              <dt>Niższe rachunki</dt>
+              <dd>Miękka woda poprawia efektywność grzania i zmniejsza zużycie detergentów nawet o kilkadziesiąt procent.</dd>
+            </div>
+            <div class="benefit-item">
+              <dt>Komfort dla skóry i włosów</dt>
+              <dd>Mydło lepiej się pieni, skóra jest mniej wysuszona, a włosy miękkie i gładkie.</dd>
+            </div>
+            <div class="benefit-item">
+              <dt>Prosta obsługa</dt>
+              <dd>Nowoczesne zmiękczacze działają automatycznie – użytkownik jedynie uzupełnia sól tabletkowaną. Resztą zajmuje się sterownik urządzenia.</dd>
+            </div>
+          </div>
 
-        <dt>Ochrona sprzętu AGD i kotłów</dt>
-        <dd>Pralki, zmywarki, ekspresy, bojlery i piece działają dłużej i bez awarii.</dd>
-
-        <dt>Niższe rachunki</dt>
-        <dd>Miękka woda poprawia efektywność grzania i zmniejsza zużycie detergentów nawet o kilkadziesiąt procent.</dd>
-
-        <dt>Komfort dla skóry i włosów</dt>
-        <dd>Mydło lepiej się pieni, skóra jest mniej wysuszona, a włosy miękkie i gładkie.</dd>
-
-        <dt>Prosta obsługa</dt>
-        <dd>Nowoczesne zmiękczacze działają automatycznie – użytkownik jedynie uzupełnia sól tabletkowaną. Resztą zajmuje się sterownik urządzenia.</dd>
-      </dl>
-
-      <p>Jeśli chcesz raz na zawsze pozbyć się problemu twardej wody, zmiękczacz wody użytkowej to najlepsze i jedyne skuteczne rozwiązanie dla całego domu. <a href="#kontakt">Skontaktuj się z nami</a> – dobierzemy urządzenie do Twoich potrzeb.</p>
+          <div class="detail-cta">
+            <p>Chcesz raz na zawsze pozbyć się problemu twardej wody? <strong>Zmiękczacz to jedyne skuteczne rozwiązanie.</strong></p>
+            <a href="#kontakt" class="btn btn-primary">Dobierz urządzenie</a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ===================== STACJA UZDATNIANIA ===================== -->
-    <section id="stacja" aria-labelledby="stacja-heading">
-      <h2 id="stacja-heading">Stacje uzdatniania wody studziennej – Gorzów</h2>
+    <section id="stacja" class="section section-alt detail-section" aria-labelledby="stacja-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Woda studzienna</span>
+          <h2 id="stacja-heading">Stacje uzdatniania wody studziennej – Gorzów</h2>
+        </div>
 
-      <h3>Czym jest stacja uzdatniania wody studziennej?</h3>
-      <p>Stacja uzdatniania wody studziennej to kompleksowy system filtracyjny, którego zadaniem jest poprawa jakości wody pochodzącej z własnego ujęcia – studni kopanej lub głębinowej. Woda studzienna, mimo że często wygląda na czystą, bardzo często nie spełnia norm wody pitnej i użytkowej. Dlatego jej odpowiednie uzdatnienie jest niezbędne dla zdrowia domowników oraz bezpieczeństwa instalacji.</p>
+        <div>
+          <h3>Czym jest stacja uzdatniania wody studziennej?</h3>
+          <p>Stacja uzdatniania wody studziennej to kompleksowy system filtracyjny, którego zadaniem jest poprawa jakości wody pochodzącej z własnego ujęcia – studni kopanej lub głębinowej. Woda studzienna, mimo że często wygląda na czystą, bardzo często nie spełnia norm wody pitnej i użytkowej. Dlatego jej odpowiednie uzdatnienie jest niezbędne dla zdrowia domowników oraz bezpieczeństwa instalacji.</p>
 
-      <h3>Dlaczego woda ze studni wymaga uzdatniania?</h3>
-      <p>W wodzie z własnego ujęcia bardzo często występują przekroczenia takich parametrów jak:</p>
-      <ul>
-        <li><strong>żelazo</strong> – powoduje rdzawy osad, przebarwienia i metaliczny smak,</li>
-        <li><strong>mangan</strong> – tworzy czarne naloty i zapycha instalacje,</li>
-        <li><strong>twardość wody</strong> – odpowiada za kamień kotłowy,</li>
-        <li><strong>bakterie i mikroorganizmy</strong> – niewidoczne zagrożenie dla zdrowia.</li>
-      </ul>
-      <p>Nieuzdatniona woda studzienna może niszczyć rury, kotły i armaturę oraz być niebezpieczna do picia i codziennego użytkowania. Profesjonalna stacja uzdatniania to konieczność, nie dodatek.</p>
+          <h3>Dlaczego woda ze studni wymaga uzdatniania?</h3>
+          <p>W wodzie z własnego ujęcia bardzo często występują przekroczenia takich parametrów jak:</p>
+          <ul>
+            <li><strong>żelazo</strong> – powoduje rdzawy osad, przebarwienia i metaliczny smak,</li>
+            <li><strong>mangan</strong> – tworzy czarne naloty i zapycha instalacje,</li>
+            <li><strong>twardość wody</strong> – odpowiada za kamień kotłowy,</li>
+            <li><strong>bakterie i mikroorganizmy</strong> – niewidoczne zagrożenie dla zdrowia.</li>
+          </ul>
+          <p>Nieuzdatniona woda studzienna może niszczyć rury, kotły i armaturę oraz być niebezpieczna do picia i codziennego użytkowania. Profesjonalna stacja uzdatniania to konieczność, nie dodatek.</p>
 
-      <h3>Jak działają stacje uzdatniania?</h3>
-      <p>W zależności od tego, jakie normy są przekroczone, stosuje się odpowiednie technologie oraz złoża filtracyjne:</p>
-      <ul>
-        <li><strong>złoża regenerowane nadmanganianem potasu</strong> – skuteczne przy wysokich stężeniach żelaza i manganu,</li>
-        <li><strong>złoża regenerowane solą tabletkowaną</strong> – wykorzystywane przy zmiękczaniu i filtrach wielofunkcyjnych.</li>
-      </ul>
-      <p>System może składać się z jednej lub kilku butli ciśnieniowych, które pracują etapami, aby osiągnąć najlepszy efekt uzdatniania.</p>
+          <h3>Jak działają stacje uzdatniania?</h3>
+          <p>W zależności od tego, jakie normy są przekroczone, stosuje się odpowiednie technologie oraz złoża filtracyjne:</p>
+          <ul>
+            <li><strong>złoża regenerowane nadmanganianem potasu</strong> – skuteczne przy wysokich stężeniach żelaza i manganu,</li>
+            <li><strong>złoża regenerowane solą tabletkowaną</strong> – wykorzystywane przy zmiękczaniu i filtrach wielofunkcyjnych.</li>
+          </ul>
+          <p>System może składać się z jednej lub kilku butli ciśnieniowych, które pracują etapami, aby osiągnąć najlepszy efekt uzdatniania.</p>
 
-      <h3>Profesjonalny dobór na podstawie badań</h3>
-      <p>Każda woda studzienna jest inna, dlatego dobór stacji uzdatniania zawsze opieramy na badaniach fizykochemicznych wody. Analiza pozwala precyzyjnie określić, jakie parametry wymagają korekty i jakie złoża będą najskuteczniejsze. Dzięki temu system działa efektywnie, bez przewymiarowania i zbędnych kosztów.</p>
+          <h3>Profesjonalny dobór na podstawie badań</h3>
+          <p>Każda woda studzienna jest inna, dlatego dobór stacji uzdatniania zawsze opieramy na badaniach fizykochemicznych wody. Analiza pozwala precyzyjnie określić, jakie parametry wymagają korekty i jakie złoża będą najskuteczniejsze. Dzięki temu system działa efektywnie, bez przewymiarowania i zbędnych kosztów.</p>
 
-      <h3>Sprawdzone rozwiązania – głowice Pentair</h3>
-      <p>Nasze stacje budujemy na renomowanych głowicach sterujących firmy Pentair, które zapewniają wysoką niezawodność, automatyczną regenerację złóż, prostą obsługę oraz stabilną i długotrwałą pracę. To rozwiązania stosowane na całym świecie w profesjonalnych instalacjach uzdatniania wody.</p>
+          <h3>Sprawdzone rozwiązania – głowice Pentair</h3>
+          <p>Nasze stacje budujemy na renomowanych głowicach sterujących firmy Pentair, które zapewniają wysoką niezawodność, automatyczną regenerację złóż, prostą obsługę oraz stabilną i długotrwałą pracę. To rozwiązania stosowane na całym świecie w profesjonalnych instalacjach uzdatniania wody.</p>
 
-      <h3>Dlaczego warto uzdatniać wodę ze studni?</h3>
-      <ul>
-        <li>Bezpieczeństwo zdrowotne dla całej rodziny.</li>
-        <li>Ochrona instalacji i urządzeń.</li>
-        <li>Brak osadów, rdzy i przebarwień.</li>
-        <li>Lepszy smak i zapach wody.</li>
-        <li>Komfort codziennego użytkowania.</li>
-      </ul>
+          <h3>Dlaczego warto uzdatniać wodę ze studni?</h3>
+          <ul class="advantages-list">
+            <li>Bezpieczeństwo zdrowotne dla całej rodziny.</li>
+            <li>Ochrona instalacji i urządzeń.</li>
+            <li>Brak osadów, rdzy i przebarwień.</li>
+            <li>Lepszy smak i zapach wody.</li>
+            <li>Komfort codziennego użytkowania.</li>
+          </ul>
 
-      <p>Jeśli korzystasz z własnej studni, stacja uzdatniania wody studziennej to podstawa komfortu i bezpieczeństwa. <a href="#kontakt">Skontaktuj się z nami</a> – dobierzemy odpowiedni system na podstawie badań Twojej wody.</p>
+          <div class="detail-cta">
+            <p>Korzystasz z własnej studni? <strong>Stacja uzdatniania to podstawa komfortu i bezpieczeństwa.</strong></p>
+            <a href="#kontakt" class="btn btn-primary">Zamów dobór systemu</a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ===================== O NAS ===================== -->
-    <section id="o-nas" aria-labelledby="o-nas-heading">
-      <h2 id="o-nas-heading">O firmie Filtry Do Wody – Gorzów</h2>
-      <p>Firma Filtry Do Wody – Gorzów specjalizuje się w kompleksowym uzdatnianiu wody pitnej i użytkowej. Pomagamy mieszkańcom regionu poprawić jakość wody, oferując nowoczesne rozwiązania dopasowane do indywidualnych potrzeb. Naszą misją jest zapewnienie czystej, zdrowej i bezpiecznej wody w każdym domu oraz miejscu pracy.</p>
-      <p>Działamy na terenie Gorzowa Wielkopolskiego i całego województwa lubuskiego.</p>
+    <section id="o-nas" class="section" aria-labelledby="o-nas-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">O nas</span>
+          <h2 id="o-nas-heading">O firmie Filtry Do Wody – Gorzów</h2>
+        </div>
 
-      <h3>Dlaczego warto wybrać Filtry Do Wody – Gorzów?</h3>
-      <ul>
-        <li><strong>Działamy kompleksowo</strong> – od analizy wody, przez dobór urządzeń, aż po dostawę, montaż i uruchomienie systemu.</li>
-        <li><strong>Stawiamy na jakość</strong> – wykorzystujemy wyłącznie sprawdzone, trwałe i niezawodne podzespoły oraz materiały.</li>
-        <li><strong>Pracujemy szybko i profesjonalnie</strong> – z pełnym zaangażowaniem oraz współpracą na każdym etapie inwestycji.</li>
-        <li><strong>Zawsze słuchamy klienta</strong> – nasze rozwiązania są projektowane tak, by w 100% odpowiadały na jego potrzeby.</li>
-      </ul>
+        <div class="about-content">
+          <p>Firma Filtry Do Wody – Gorzów specjalizuje się w kompleksowym uzdatnianiu wody pitnej i użytkowej. Pomagamy mieszkańcom regionu poprawić jakość wody, oferując nowoczesne rozwiązania dopasowane do indywidualnych potrzeb. Naszą misją jest zapewnienie czystej, zdrowej i bezpiecznej wody w każdym domu oraz miejscu pracy.</p>
+          <p>Działamy na terenie Gorzowa Wielkopolskiego i całego województwa lubuskiego.</p>
+
+          <h3>Dlaczego warto wybrać Filtry Do Wody – Gorzów?</h3>
+          <ul class="about-values">
+            <li>
+              <strong>Działamy kompleksowo</strong>
+              <span>Od analizy wody, przez dobór urządzeń, aż po dostawę, montaż i uruchomienie systemu.</span>
+            </li>
+            <li>
+              <strong>Stawiamy na jakość</strong>
+              <span>Wykorzystujemy wyłącznie sprawdzone, trwałe i niezawodne podzespoły oraz materiały.</span>
+            </li>
+            <li>
+              <strong>Pracujemy szybko i profesjonalnie</strong>
+              <span>Z pełnym zaangażowaniem oraz współpracą na każdym etapie inwestycji.</span>
+            </li>
+            <li>
+              <strong>Zawsze słuchamy klienta</strong>
+              <span>Nasze rozwiązania są projektowane tak, by w 100% odpowiadały na jego potrzeby.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <!-- ===================== KONTAKT ===================== -->
-    <section id="kontakt" aria-labelledby="kontakt-heading">
-      <h2 id="kontakt-heading">Kontakt – Filtry Do Wody Gorzów</h2>
-      <p>Skontaktuj się z nami, aby omówić potrzeby dotyczące uzdatniania wody w Twoim domu lub firmie. Działamy na terenie Gorzowa Wielkopolskiego i województwa lubuskiego.</p>
+    <section id="kontakt" class="section section-alt" aria-labelledby="kontakt-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Kontakt</span>
+          <h2 id="kontakt-heading">Skontaktuj się z nami</h2>
+          <p>Omów z nami potrzeby dotyczące uzdatniania wody w Twoim domu lub firmie. Działamy na terenie Gorzowa Wielkopolskiego i województwa lubuskiego.</p>
+        </div>
 
-      <address>
-        <dl>
-          <dt>Firma</dt>
-          <dd>Filtry Do Wody – Gorzów</dd>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <address>
+              <dl>
+                <div>
+                  <dt>Firma</dt>
+                  <dd>Filtry Do Wody – Gorzów</dd>
+                </div>
+                <div>
+                  <dt>Adres</dt>
+                  <dd>
+                    <a href="https://maps.google.com/?q=Obr.+Pokoju+69,+66-400+Gorz%C3%B3w+Wielkopolski" target="_blank" rel="noopener">
+                      Obr. Pokoju 69, 66-400 Gorzów Wielkopolski
+                    </a>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Telefon</dt>
+                  <dd><a href="tel:+48608666575" class="contact-phone">+48 608 666 575</a></dd>
+                </div>
+                <div>
+                  <dt>E-mail</dt>
+                  <dd>[tu będzie e-mail]</dd>
+                </div>
+                <div>
+                  <dt>Obszar działania</dt>
+                  <dd>Gorzów Wielkopolski i województwo lubuskie</dd>
+                </div>
+              </dl>
+            </address>
 
-          <dt>Adres</dt>
-          <dd>
-            <a href="https://maps.google.com/?q=Obr.+Pokoju+69,+66-400+Gorzów+Wielkopolski" target="_blank" rel="noopener">
-              Obr. Pokoju 69, 66-400 Gorzów Wielkopolski
-            </a>
-          </dd>
+            <ul class="contact-socials">
+              <li>
+                <a href="https://www.facebook.com/filtrydowodygorzow" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/filtrydowodygorzow" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                  Instagram
+                </a>
+              </li>
+            </ul>
+          </div>
 
-          <dt>Telefon</dt>
-          <dd><a href="tel:+48608666575">+48 608 666 575</a></dd>
-
-          <dt>E-mail</dt>
-          <dd><a href="mailto:filtrygorzow@gmail.com">filtrygorzow@gmail.com</a></dd>
-
-          <dt>Obszar działania</dt>
-          <dd>Gorzów Wielkopolski i województwo lubuskie</dd>
-        </dl>
-      </address>
-
-      <h3>Znajdź nas w mediach społecznościowych</h3>
-      <ul>
-        <li>
-          <a href="https://www.facebook.com/filtrydowodygorzow" target="_blank" rel="noopener noreferrer">
-            Facebook – Filtry Do Wody Gorzów
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/filtrydowodygorzow" target="_blank" rel="noopener noreferrer">
-            Instagram – @filtrydowodygorzow
-          </a>
-        </li>
-      </ul>
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2416.5!2d15.2288!3d52.7368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sObr.+Pokoju+69%2C+66-400+Gorz%C3%B3w+Wielkopolski!5e0!3m2!1spl!2spl!4v1"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa – Filtry Do Wody Gorzów, Obr. Pokoju 69">
+            </iframe>
+          </div>
+        </div>
+      </div>
     </section>
 
   </main>
 
   <!-- ===================== FOOTER ===================== -->
-  <footer>
-    <p>
-      <strong>Filtry Do Wody – Gorzów</strong> |
-      Obr. Pokoju 69, 66-400 Gorzów Wielkopolski |
-      <a href="tel:+48608666575">+48 608 666 575</a> |
-      <a href="mailto:filtrygorzow@gmail.com">filtrygorzow@gmail.com</a>
-    </p>
-    <p>Montaż filtrów RO, zmiękczaczy wody i stacji uzdatniania – Gorzów Wielkopolski i województwo lubuskie.</p>
-    <small>&copy; 2025 Filtry Do Wody – Gorzów. Wszelkie prawa zastrzeżone.</small>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span><strong>Filtry Do Wody – Gorzów</strong></span>
+      <span>Obr. Pokoju 69, 66-400 Gorzów Wielkopolski</span>
+      <a href="tel:+48608666575">+48 608 666 575</a>
+      [tu będzie e-mail]
+    </div>
   </footer>
 
+  <!-- ===================== SCRIPTS ===================== -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
+    // Sticky header shadow
+    const header = document.querySelector('.site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // Hamburger menu
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.main-nav');
+    const overlay = document.querySelector('.nav-overlay');
+
+    function toggleMenu() {
+      const isOpen = nav.classList.toggle('open');
+      hamburger.classList.toggle('active');
+      overlay.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', toggleMenu);
+
+    // Zamknij menu po kliknięciu w link nawigacji
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (nav.classList.contains('open')) {
+          toggleMenu();
+        }
+      });
+    });
+
+  </script>
 </body>
 </html>
