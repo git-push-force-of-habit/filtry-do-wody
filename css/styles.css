@@ -501,6 +501,45 @@ p { margin-bottom: 1em; }
 }
 .offer-card-link:hover svg { transform: translateX(4px); }
 
+/* Detail section image (float right on desktop) */
+.detail-body {
+  overflow: hidden; /* contain float */
+}
+
+.detail-image {
+  margin: 0 0 1.5rem 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-200);
+  background: var(--white);
+}
+
+.detail-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform .6s ease;
+}
+
+.detail-image:hover img {
+  transform: scale(1.03);
+}
+
+@media (min-width: 769px) {
+  .detail-image {
+    float: right;
+    width: 340px;
+    margin: 0 0 1.5rem 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .detail-image {
+    width: 380px;
+  }
+}
+
 /* ============================================================
    DETAIL SECTIONS (RO, Zmiękczacz, Stacja)
    ============================================================ */
@@ -828,7 +867,8 @@ p { margin-bottom: 1em; }
   .about-values li,
   .contact-grid,
   .detail-cta,
-  .advantages-list {
+  .advantages-list,
+  .detail-image {
     animation: scrollReveal ease both;
     animation-timeline: view();
     animation-range: entry 0% entry 30%;
