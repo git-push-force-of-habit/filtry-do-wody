@@ -42,8 +42,8 @@ DEFAULT_SRC = os.path.join(os.path.dirname(ROOT),     # originals live NEXT TO t
 # (source subfolder, url slug, section title, short label for the jump nav) -- section order
 CATS = [
     ("FILT_RO",    "ro",        "Filtry odwróconej osmozy (RO)",      "Filtry RO"),
-    ("STACJA",     "stacja",    "Stacje uzdatniania wody studziennej","Stacje uzdatniania wody"),
     ("ZMIĘKCZACZ", "zmiekczacz","Zmiękczacze wody użytkowej",         "Zmiękczacze"),
+    ("STACJA",     "stacja",    "Stacje uzdatniania wody studziennej","Stacje uzdatniania wody"),
 ]
 
 THUMB_MAX = 500   # px, longest side of grid thumbnail
