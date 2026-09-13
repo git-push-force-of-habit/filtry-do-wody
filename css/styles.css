@@ -90,7 +90,7 @@ h1, h2, h3, h4 {
 }
 
 h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
-h2 { font-size: clamp(1.7rem, 3.5vw, 2.4rem); margin-bottom: 1rem; }
+h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); margin-bottom: 1rem; }
 h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); margin-bottom: .6rem; }
 
 p { margin-bottom: 1em; }
@@ -218,6 +218,7 @@ p { margin-bottom: 1em; }
   color: var(--white);
   font-size: .88rem;
   font-weight: 600;
+  white-space: nowrap;
   border-radius: 8px;
   transition: all var(--transition);
 }
@@ -718,9 +719,11 @@ p { margin-bottom: 1em; }
    ============================================================ */
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 3rem;
   align-items: start;
+  max-width: 720px;
+  margin-inline: auto;
 }
 
 .contact-info address {
@@ -781,6 +784,11 @@ p { margin-bottom: 1em; }
 
 .contact-socials a:hover {
   background: var(--blue);
+  color: var(--white);
+}
+
+.contact-socials a.social-whatsapp:hover {
+  background: #25d366;
   color: var(--white);
 }
 
@@ -871,6 +879,8 @@ p { margin-bottom: 1em; }
   .detail-image {
     animation: scrollReveal ease both;
     animation-timeline: view();
+    /* Scroll-driven animations (valid CSS; IDE/Qodana validator is older than the spec) */
+    /*noinspection CssInvalidPropertyValue*/
     animation-range: entry 0% entry 30%;
   }
 
@@ -907,7 +917,7 @@ p { margin-bottom: 1em; }
   animation: ctaShimmer 6s ease infinite;
 }
 @keyframes ctaShimmer {
-  0%, 100% { background-position: 0% 50%; }
+  0%, 100% { background-position: 0 50%; }
   50%      { background-position: 100% 50%; }
 }
 
@@ -944,7 +954,7 @@ p { margin-bottom: 1em; }
 /* ============================================================
    RESPONSIVE
    ============================================================ */
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .logo-text span { display: none; }
   .main-nav a {
     font-size: .8rem;
@@ -958,12 +968,10 @@ p { margin-bottom: 1em; }
   }
 }
 
-@media (max-width: 768px) {
-  :root {
-    --header-h: 68px;
-  }
-
-  /* Mobile nav */
+/* Tablet & poniżej — menu w formie panelu (hamburger).
+   Po dodaniu 7. pozycji („Galeria") poziome menu z długą pozycją
+   „Stacje uzdatniania wody" mieści się dopiero powyżej ~1100 px. */
+@media (max-width: 1100px) {
   .hamburger { display: flex; }
 
   .main-nav {
@@ -1004,6 +1012,12 @@ p { margin-bottom: 1em; }
   .nav-overlay.active {
     opacity: 1;
     visibility: visible;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-h: 68px;
   }
 
   /* Hero adjustments */
@@ -1065,3 +1079,131 @@ p { margin-bottom: 1em; }
   .section { padding-block: 2rem; }
   body { font-size: 11pt; }
 }
+
+/* ============================================================
+   GALERIA (galeria.html)
+   ============================================================ */
+.gallery-page {
+  padding-top: calc(var(--header-h) + 2.5rem);
+}
+
+/* Szybkie linki do sekcji */
+.gallery-jump {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .6rem;
+  max-width: 760px;
+  margin: -1.5rem auto 3rem;
+}
+
+.gallery-jump a {
+  display: inline-flex;
+  align-items: center;
+  padding: .5rem 1.15rem;
+  background: var(--blue-pale);
+  color: var(--navy);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: .9rem;
+  transition: all var(--transition);
+}
+
+.gallery-jump a:hover {
+  background: var(--blue);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+.gallery-group {
+  margin-bottom: 4.5rem;
+  scroll-margin-top: 1rem;
+}
+.gallery-group:last-child { margin-bottom: 0; }
+
+.gallery-group-title {
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  color: var(--navy);
+  margin-bottom: 1.25rem;
+  padding-bottom: .6rem;
+  border-bottom: 2px solid var(--blue-pale);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+  gap: 8px;
+}
+
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(158px, 1fr));
+    gap: 12px;
+  }
+}
+
+.gallery-item {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--gray-200);
+  background: var(--gray-100);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: zoom-in;
+  aspect-ratio: 1 / 1;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s ease;
+}
+
+.gallery-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: rgba(28, 137, 211, .3);
+}
+.gallery-item:hover img { transform: scale(1.05); }
+
+.gallery-item:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+/* Lightbox (natywny <dialog>) */
+.lightbox {
+  margin: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  max-width: none;
+  max-height: none;
+  overflow: visible;
+  cursor: zoom-out;
+}
+
+.lightbox img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 95vw;
+  max-height: 95vh;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
+}
+
+.lightbox:focus,
+.lightbox:focus-visible { outline: none; }
+
+.lightbox::backdrop {
+  background: rgba(1, 12, 32, .92);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+body:has(.lightbox[open]) { overflow: hidden; }
