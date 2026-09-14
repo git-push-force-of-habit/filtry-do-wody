@@ -158,8 +158,8 @@ TEMPLATE = r"""<!DOCTYPE html>
   <meta property="og:locale" content="pl_PL">
 
   <link rel="canonical" href="https://git-push-force-of-habit.github.io/filtry-do-wody/galeria.html">
-  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
   <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="apple-touch-icon" href="images/logo.png">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -168,7 +168,7 @@ TEMPLATE = r"""<!DOCTYPE html>
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="logo-link" aria-label="Filtry Do Wody Gorzów – strona główna">
-        <img src="images/logo.svg" alt="Logo Filtry Do Wody Gorzów" width="48" height="48">
+        <img src="images/logo.png" alt="Logo Filtry Do Wody Gorzów" width="48" height="48">
         <div class="logo-text">
           <strong>Filtry Do Wody – Gorzów</strong>
           <span>Profesjonalne systemy uzdatniania wody</span>
@@ -214,7 +214,7 @@ __GROUPS__
   <footer class="site-footer">
     <div class="container footer-inner">
       <span><strong>Filtry Do Wody – Gorzów</strong></span>
-      <span>Obr. Pokoju 69, 66-400 Gorzów Wielkopolski</span>
+      <span>ul. Brzozowa 9d, 66-400 Wawrów</span>
       <a href="tel:+48608666575">+48 608 666 575</a>
       <a href="mailto:filtrygorzow@gmail.com">filtrygorzow@gmail.com</a>
     </div>
